@@ -1,0 +1,3 @@
+- [ ] Open Discord chat with the existing method `res.partner`.`contact_via_discord`
+- [ ] Force Discord Tag recompute
+- [ ] Search by Discord as a default option
