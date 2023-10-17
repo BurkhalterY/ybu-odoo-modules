@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_link_link_tree" model="ir.ui.view">
+        <field name="name">link.link.tree</field>
+        <field name="model">link.link</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="res_model" invisible="1"/>
+                <field name="res_id" invisible="1"/>
+                <field name="sequence" widget="handle"/>
+                <field name="favorite" widget="priority"/>
+                <field name="name"/>
+                <field name="description"/>
+                <button name="open_url"
+                        type="object"
+                        class="btn-sm btn-link fa fa-external-link"
+                        title="Open"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
