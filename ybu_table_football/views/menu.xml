@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_table_football"
+        web_icon="ybu_table_football,static/description/icon.png"
+        name="Table Football"
+        sequence="42">
+        <menuitem
+            name="Matches"
+            id="menu_table_football_match"
+            action="action_table_football_match"
+            sequence="10"/>
+    </menuitem>
+</odoo>
