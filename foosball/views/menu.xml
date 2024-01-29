@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_foosball"
+        web_icon="foosball,static/description/icon.png"
+        name="Foosball"
+        sequence="42">
+        <menuitem
+            name="Matches"
+            id="menu_foosball_match"
+            action="action_foosball_match"
+            sequence="10"/>
+    </menuitem>
+</odoo>
