@@ -1,9 +1,9 @@
 from odoo import api, fields, models
 
 
-class TableFootballMatch(models.Model):
-    _name = "table.football.match"
-    _description = "Table Football Match"
+class FoosballMatch(models.Model):
+    _name = "foosball.match"
+    _description = "Foosball Match"
     _inherit = ["mail.thread"]
     _order = "date desc"
 
@@ -11,13 +11,13 @@ class TableFootballMatch(models.Model):
     date = fields.Datetime("Date", default=fields.Datetime.now, required=True)
     winner_ids = fields.Many2many(
         "res.partner",
-        relation="table_football_match_winner",
+        relation="foosball_match_winner",
         string="Winner Team",
         required=True,
     )
     loser_ids = fields.Many2many(
         "res.partner",
-        relation="table_football_match_loser",
+        relation="foosball_match_loser",
         string="Loser Team",
         required=True,
     )

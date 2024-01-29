@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Table Football",
+    "name": "Foosball",
     "version": "16.0.0.1.0",
     "description": """Keep track of your matches! ⚽""",
     "author": "Yannis Burkhalter",
-    "website": "https://github.com/BurkhalterY/ybu-odoo-addons/tree/16.0/ybu_table_football",
+    "website": "https://github.com/BurkhalterY/ybu-odoo-addons/tree/16.0/foosball",
     "license": "AGPL-3",
     "category": "Productivity",
     "depends": ["mail"],
     "data": [
         "security/ir.model.access.csv",
-        "views/table_football_match.xml",
+        "views/foosball_match.xml",
         "views/menu.xml",
     ],
     "application": True,
