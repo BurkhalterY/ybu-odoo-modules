@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherited" model="ir.ui.view">
+        <field name="name">res.partner.form.inherited</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="before">
+                <page name="names" string="Names">
+                    <field name="name_ids"/>
+                </page>
+                <page name="phones" string="Phones">
+                    <field name="phone_ids"/>
+                </page>
+                <page name="emails" string="Emails">
+                    <field name="email_ids"/>
+                </page>
+                <page name="websites" string="Websites">
+                    <field name="website_ids"/>
+                </page>
+                <page name="others" string="Others Infos">
+                    <group invisible="is_company">
+                        <group>
+                            <field name="firstname"/>
+                            <field name="birthday" placeholder="2024-03-14"/>
+                        </group>
+                        <group>
+                            <field name="lastname"/>
+                            <field name="gender"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

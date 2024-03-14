@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_name_tree" model="ir.ui.view">
+        <field name="name">res.partner.name.tree</field>
+        <field name="model">res.partner.name</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="type" optional="show"/>
+                <field name="note" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_partner_phone_tree" model="ir.ui.view">
+        <field name="name">res.partner.phone.tree</field>
+        <field name="model">res.partner.phone</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name" widget="phone"/>
+                <field name="type" optional="show"/>
+                <field name="type2" optional="show"/>
+                <field name="note" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_partner_email_tree" model="ir.ui.view">
+        <field name="name">res.partner.email.tree</field>
+        <field name="model">res.partner.email</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name" widget="email"/>
+                <field name="type" optional="show"/>
+                <field name="note" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_partner_website_tree" model="ir.ui.view">
+        <field name="name">res.partner.website.tree</field>
+        <field name="model">res.partner.website</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name" widget="url"/>
+                <field name="type" optional="show"/>
+                <field name="note" optional="show"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
