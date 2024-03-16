@@ -1,0 +1,311 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_enhanced
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240229\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-16 14:34+0000\n"
+"PO-Revision-Date: 2024-03-16 14:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_enhanced
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "2024-03-14"
+msgstr ""
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__active
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__active
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__active
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__active
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__birthday
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__birthday
+msgid "Birthday"
+msgstr "Anniversaire"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__cell
+msgid "Cell"
+msgstr "Mobile"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__create_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__create_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__create_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__create_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__create_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__create_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__display_name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__display_name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__display_name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__email
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__email
+msgid "Email"
+msgstr "Email"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__email_ids
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__email_ids
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "Emails"
+msgstr "Emails"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner__gender__f
+msgid "Female"
+msgstr "Femme"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__firstname
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__firstname
+msgid "Firstname"
+msgstr "Prénom"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__gender
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__gender
+msgid "Gender"
+msgstr "Genre"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_data__type__home
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_email__type__home
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_name__type__home
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type__home
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_website__type__home
+msgid "Home"
+msgstr "Perso."
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__write_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__write_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__write_uid
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__write_uid
+msgid "Last Updated by"
+msgstr "Mis à jour par"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__write_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__write_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__write_date
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__write_date
+msgid "Last Updated on"
+msgstr "Mis à jour le"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__lastname
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__lastname
+msgid "Lastname"
+msgstr "Nom de famille"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,help:partner_enhanced.field_res_partner_data__type
+#: model:ir.model.fields,help:partner_enhanced.field_res_partner_email__type
+#: model:ir.model.fields,help:partner_enhanced.field_res_partner_name__type
+#: model:ir.model.fields,help:partner_enhanced.field_res_partner_phone__type
+#: model:ir.model.fields,help:partner_enhanced.field_res_partner_website__type
+msgid "Let empty for both"
+msgstr "Laisser vide si commun aux deux"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner__gender__m
+msgid "Male"
+msgstr "Homme"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__mobile
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__mobile
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__name_ids
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__name_ids
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "Names"
+msgstr "Noms"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__note
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__note
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__note
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__note
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__note
+msgid "Note"
+msgstr "Note"
+
+#. module: partner_enhanced
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "Others Infos"
+msgstr "Autres infos."
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__pager
+msgid "Pager"
+msgstr "Pager"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__partner_id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__partner_id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__partner_id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__partner_id
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner_data
+msgid "Partner Additional Data"
+msgstr "Donnée supplémentaire du partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner_email
+msgid "Partner Additional Email"
+msgstr "Email supplémentaire du partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner_name
+msgid "Partner Additional Name"
+msgstr "Nom supplémentaire du partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner_phone
+msgid "Partner Additional Phone"
+msgstr "Téléphone supplémentaire du partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model,name:partner_enhanced.model_res_partner_website
+msgid "Partner Additional Website"
+msgstr "Site web supplémentaire du partenaire"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__phone
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__type2
+msgid "Phone Type"
+msgstr "Type (tél.)"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__phone_ids
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__phone_ids
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "Phones"
+msgstr "Téléphones"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__sequence
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__sequence
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__sequence
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__sequence
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__text
+msgid "Text"
+msgstr "Texte"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__textphone
+msgid "Textphone"
+msgstr "TTY/TTD"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__type
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__type
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__type
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__type
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__type
+msgid "Type"
+msgstr "Type"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_data__name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_email__name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_name__name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_phone__name
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner_website__name
+msgid "Value"
+msgstr "Valeur"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__video
+msgid "Video"
+msgstr "Vidéo"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type2__voice
+msgid "Voice"
+msgstr "Voix"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__website
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__website
+msgid "Website Link"
+msgstr "Lien vers un site web"
+
+#. module: partner_enhanced
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_partner__website_ids
+#: model:ir.model.fields,field_description:partner_enhanced.field_res_users__website_ids
+#: model_terms:ir.ui.view,arch_db:partner_enhanced.view_partner_form_inherited
+msgid "Websites"
+msgstr "Sites web"
+
+#. module: partner_enhanced
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_data__type__work
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_email__type__work
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_name__type__work
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_phone__type__work
+#: model:ir.model.fields.selection,name:partner_enhanced.selection__res_partner_website__type__work
+msgid "Work"
+msgstr "Pro."
