@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- These default values are native for vCard 3 and vCard 4 -->
+
+    <record id="res_partner_phone_type_work" model="res.partner.phone.type">
+        <field name="name">work</field>
+        <field name="display_name">Work</field>
+    </record>
+
+    <record id="res_partner_phone_type_home" model="res.partner.phone.type">
+        <field name="name">home</field>
+        <field name="display_name">Home</field>
+    </record>
+
+    <record id="res_partner_phone_type_text" model="res.partner.phone.type">
+        <field name="name">text</field>
+        <field name="display_name">Text</field>
+        <!-- "msg" for vCard 3, case handled in Python -->
+    </record>
+
+    <record id="res_partner_phone_type_voice" model="res.partner.phone.type">
+        <field name="name">voice</field>
+        <field name="display_name">Voice</field>
+    </record>
+
+    <record id="res_partner_phone_type_fax" model="res.partner.phone.type">
+        <field name="name">fax</field>
+        <field name="display_name">Fax</field>
+    </record>
+
+    <record id="res_partner_phone_type_cell" model="res.partner.phone.type">
+        <field name="name">cell</field>
+        <field name="display_name">Cell</field>
+    </record>
+
+    <record id="res_partner_phone_type_video" model="res.partner.phone.type">
+        <field name="name">video</field>
+        <field name="display_name">Video</field>
+    </record>
+
+    <record id="res_partner_phone_type_pager" model="res.partner.phone.type">
+        <field name="name">pager</field>
+        <field name="display_name">Pager</field>
+    </record>
+
+</odoo>

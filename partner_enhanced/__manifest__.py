@@ -19,6 +19,7 @@ Add some useful fields on partners:
         "security/ir.model.access.csv",
         "views/res_partner.xml",
         "views/res_partner_data.xml",
+        "data/res_partner_phone_type.xml",
     ],
     "post_init_hook": "post_init_hook",
 }

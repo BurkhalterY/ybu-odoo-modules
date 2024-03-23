@@ -10,11 +10,6 @@ class ResParnerData(models.AbstractModel):
         "res.partner", string="Partner", required=True, ondelete="cascade"
     )
     name = fields.Char("Value", required=True)
-    type = fields.Selection(
-        [("work", "Work"), ("home", "Home")],
-        string="Type",
-        help="Let empty for both",
-    )
     note = fields.Text("Note")
     active = fields.Boolean(default=True)
     sequence = fields.Integer(default=10)
@@ -31,28 +26,23 @@ class ResParnerPhone(models.Model):
     _inherit = ["res.partner.data"]
     _description = "Partner Additional Phone"
 
-    type2 = fields.Selection(
-        [
-            ("text", "Text"),
-            ("voice", "Voice"),
-            ("fax", "Fax"),
-            ("cell", "Cell"),
-            ("video", "Video"),
-            ("pager", "Pager"),
-            ("textphone", "Textphone"),
-        ],
-        string="Phone Type",
-        default="voice",
-        required=True,
-    )
+    type_ids = fields.Many2many("res.partner.phone.type")
 
-    @api.onchange("name", "partner_id.country_id", "partner_id.company_id")
+    @api.onchange("name")
     def _onchange_phone_validation(self):
         if self.name:
             self.name = (
                 self._phone_format(fname="name", force_format="INTERNATIONAL")
                 or self.name
             )
+
+
+class ResParnerPhoneType(models.Model):
+    _name = "res.partner.phone.type"
+    _description = "Phone Type"
+
+    name = fields.Char("Technical Name", required=True)
+    display_name = fields.Char("Name", required=True, translate=True)
 
 
 class ResParnerEmail(models.Model):

@@ -25,8 +25,28 @@ class ResParner(models.Model):
     def _compute_phone(self):
         for partner in self:
             partner.phone = partner.phone_ids.filtered(
-                lambda phone: phone.type2 == "voice"
+                lambda phone: "voice" in phone.type_ids.mapped("name")
             )[:1].name
             partner.mobile = partner.phone_ids.filtered(
-                lambda phone: phone.type2 == "cell"
+                lambda phone: "cell" in phone.type_ids.mapped("name")
             )[:1].name
+
+    def _mig_enhanced_fields(self):
+        for model, ffields in (
+            ("phone", ("phone", "mobile")),
+            ("email", ("email",)),
+            ("website", ("website",)),
+        ):
+            self.env[f"res.partner.{model}"].create(
+                [
+                    {
+                        "partner_id": partner.id,
+                        "name": getattr(partner, field),
+                        **{"type": "cell" for _ in range(1) if field == "mobile"},
+                    }
+                    for field in ffields
+                    for partner in self.with_context(active_test=False).search(
+                        [(field, "!=", False)]
+                    )
+                ]
+            )
