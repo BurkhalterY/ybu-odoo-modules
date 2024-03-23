@@ -18,8 +18,8 @@ class ResParner(models.Model):
 
     firstname = fields.Char("Firstname")
     lastname = fields.Char("Lastname")
-    gender = fields.Selection([("M", "Male"), ("F", "Female")], string="Gender")
     birthday = fields.Char("Birthday")
+    gender = fields.Selection([("M", "Male"), ("F", "Female")], string="Gender")
 
     @api.depends("phone_ids")
     def _compute_phone(self):

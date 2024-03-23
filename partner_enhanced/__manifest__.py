@@ -2,7 +2,14 @@
 {
     "name": "Partner Enhanced",
     "version": "17.0.0.1.0",
-    "description": """Add some useful fields on partners""",
+    "description": """
+Add some useful fields on partners:
+- Many phones, emails and websites
+- Firstname & lastname, but without display name
+- Birthday
+- Gender
+- Additional names
+""",
     "author": "Yannis Burkhalter",
     "website": "https://github.com/BurkhalterY/ybu-odoo-addons/tree/17.0/partner_enhanced",
     "license": "AGPL-3",
