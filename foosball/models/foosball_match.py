@@ -33,10 +33,12 @@ class FoosballMatch(models.Model):
     @api.model
     def _get_stylized_score(self, score):
         if score == 10:
-            return "🔟"
+            return "\U0001f51f"  # https://emojipedia.org/keycap-10
         if score == 100:
-            return "💯"
-        return "".join([n + "\ufe0f" for n in str(score)])
+            return "\U0001f4af"  # https://emojipedia.org/hundred-points
+        if 0 <= score < 10:
+            return str(score) + "\ufe0f\u20e3"  # https://emojipedia.org/search?q=keycap
+        return str(score)
 
     @api.depends("winner_ids.name", "loser_ids.name", "winner_score", "loser_score")
     def _compute_name(self):
