@@ -4,7 +4,7 @@ from odoo import api, fields, models
 class FoosballMatch(models.Model):
     _name = "foosball.match"
     _description = "Foosball Match"
-    _inherit = ["mail.thread"]
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "date desc"
 
     name = fields.Char("Name", compute="_compute_name", store=True)

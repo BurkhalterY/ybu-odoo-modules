@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Foosball",
-    "version": "17.0.0.1.0",
+    "version": "17.0.0.2.0",
     "description": """Keep track of your matches! ⚽""",
     "author": "Yannis Burkhalter",
     "website": "https://github.com/BurkhalterY/ybu-odoo-addons/tree/17.0/foosball",
