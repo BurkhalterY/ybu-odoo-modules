@@ -23,7 +23,7 @@ class FoosballMatch(models.Model):
         string="Loser Team",
         required=True,
     )
-    winner_score = fields.Integer("Winner Score", tracking=True)
+    winner_score = fields.Integer("Winner Score", tracking=True, default=10)
     loser_score = fields.Integer("Loser Score", tracking=True)
     priority = fields.Selection(
         [("0", "Normal"), ("1", "Important")],
