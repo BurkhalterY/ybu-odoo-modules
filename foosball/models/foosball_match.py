@@ -8,7 +8,9 @@ class FoosballMatch(models.Model):
     _order = "date desc"
 
     name = fields.Char("Name", compute="_compute_name", store=True)
-    date = fields.Datetime("Date", default=fields.Datetime.now, required=True)
+    date = fields.Datetime(
+        "Date", default=fields.Datetime.now, required=True, copy=False
+    )
     winner_ids = fields.Many2many(
         "res.partner",
         relation="foosball_match_winner",
@@ -21,7 +23,7 @@ class FoosballMatch(models.Model):
         string="Loser Team",
         required=True,
     )
-    winner_score = fields.Integer("Winner Score", tracking=True)
+    winner_score = fields.Integer("Winner Score", tracking=True, default=10)
     loser_score = fields.Integer("Loser Score", tracking=True)
     priority = fields.Selection(
         [("0", "Normal"), ("1", "Important")],
