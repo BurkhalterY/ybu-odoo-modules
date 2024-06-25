@@ -8,7 +8,9 @@ class FoosballMatch(models.Model):
     _order = "date desc"
 
     name = fields.Char("Name", compute="_compute_name", store=True)
-    date = fields.Datetime("Date", default=fields.Datetime.now, required=True)
+    date = fields.Datetime(
+        "Date", default=fields.Datetime.now, required=True, copy=False
+    )
     winner_ids = fields.Many2many(
         "res.partner",
         relation="foosball_match_winner",
