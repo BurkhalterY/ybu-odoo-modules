@@ -43,6 +43,7 @@
                 <field name="winner_ids" decoration-success="1" widget="many2many_tags_avatar"/>
                 <field name="loser_score" decoration-danger="1"/>
                 <field name="loser_ids" decoration-danger="1" widget="many2many_tags_avatar"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
             </tree>
         </field>
     </record>
