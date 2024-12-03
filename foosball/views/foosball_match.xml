@@ -24,11 +24,7 @@
                         </group>
                     </group>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
@@ -37,14 +33,14 @@
         <field name="name">foosball.match.tree</field>
         <field name="model">foosball.match</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="date"/>
                 <field name="winner_score" decoration-success="1"/>
                 <field name="winner_ids" decoration-success="1" widget="many2many_tags_avatar"/>
                 <field name="loser_score" decoration-danger="1"/>
                 <field name="loser_ids" decoration-danger="1" widget="many2many_tags_avatar"/>
                 <field name="activity_ids" widget="list_activity" optional="show"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -52,6 +48,6 @@
         <field name="type">ir.actions.act_window</field>
         <field name="name">Foosball Match</field>
         <field name="res_model">foosball.match</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>
