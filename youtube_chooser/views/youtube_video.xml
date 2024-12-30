@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="youtube_video_view_tree" model="ir.ui.view">
+        <field name="name">youtube.video.view.tree</field>
+        <field name="model">youtube.video</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="duration"/>
+                <field name="channel" optional="show"/>
+                <field name="date" optional="show"/>
+                <field name="tag_ids" optional="show"/>
+                <field name="playlist_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
