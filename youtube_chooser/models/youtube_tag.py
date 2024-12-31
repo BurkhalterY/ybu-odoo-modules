@@ -6,6 +6,8 @@ class YoutubeTag(models.Model):
     _description = "YouTube Tag"
     _order = "name"
 
-    user_id = fields.Many2one("res.users", string="User")
+    user_id = fields.Many2one(
+        "res.users", string="User", default=lambda self: self.env.uid
+    )
     name = fields.Char("Tag")
     active = fields.Boolean(default=True)

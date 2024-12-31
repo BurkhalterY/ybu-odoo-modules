@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem
-        id="menu_foosball"
-        web_icon="foosball,static/description/icon.png"
-        name="Foosball"
-        sequence="300">
+
+    <menuitem name="YouTube"
+        id="menu_youtube_main"
+        sequence="310"
+        web_icon="youtube_chooser,static/description/icon.png">
+
         <menuitem
-            name="Matches"
-            id="menu_foosball_match"
-            action="action_foosball_match"
+            id="menu_youtube_video"
+            action="action_youtube_video"
             sequence="10"/>
+
+        <menuitem
+            id="menu_youtube_playlist"
+            action="action_youtube_playlist"
+            sequence="20"/>
+
+        <menuitem
+            id="menu_youtube_video_chooser"
+            action="action_youtube_video_chooser"
+            sequence="30"/>
+
+        <menuitem
+            id="menu_res_config_settings_youtube"
+            action="action_res_config_settings_youtube"
+            sequence="90"/>
+
     </menuitem>
+
 </odoo>

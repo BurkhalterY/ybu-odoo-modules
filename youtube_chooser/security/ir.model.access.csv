@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_youtube_playlist,youtube_playlist,model_youtube_playlist,base.group_user,1,1,1,1
 access_youtube_tag,youtube_tag,model_youtube_tag,base.group_user,1,1,1,1
 access_youtube_video,youtube_video,model_youtube_video,base.group_user,1,1,1,1
+access_youtube_video_chooser,youtube_video_chooser,model_youtube_video_chooser,base.group_user,1,1,1,1
