@@ -17,7 +17,10 @@
         <field name="name">youtube.playlist.view.form</field>
         <field name="model">youtube.playlist</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form>
+                <header>
+                    <button string="Sync" name="sync" type="object" class="oe_highlight" icon="fa-refresh"/>
+                </header>
                 <sheet>
                     <group>
                         <group>

@@ -11,6 +11,7 @@
     "depends": ["base_setup"],
     "data": [
         "security/ir.model.access.csv",
+        "security/ir_rule.xml",
         "views/res_config_settings.xml",
         "views/youtube_playlist.xml",
         "views/youtube_video.xml",

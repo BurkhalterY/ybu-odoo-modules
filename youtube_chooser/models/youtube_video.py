@@ -15,11 +15,12 @@ class YoutubeVideo(models.Model):
         "res.users", string="User", default=lambda self: self.env.uid
     )
     name = fields.Char("Title")
-    url = fields.Char("URL")
+    url = fields.Char("URL", required=True)
     youtubeid = fields.Char("YouTube ID", compute="_compute_youtubeid", store=True)
     duration = fields.Float("Duration", help="Hours")
     channel = fields.Char("Channel")
     date = fields.Datetime("Release Date")
+    lang_id = fields.Many2one("res.lang", string="Language")
     thumbnail = fields.Binary("Thumbnail")
 
     playlist_id = fields.Many2one("youtube.playlist", string="Playlist")
@@ -57,6 +58,14 @@ class YoutubeVideo(models.Model):
             if "items" not in data:
                 continue
             for item in data["items"]:
+                lang_code = item["snippet"]["defaultAudioLanguage"][:2]
+                print(lang_code)
+                lang = (
+                    self.env["res.lang"]
+                    .with_context(active_test=False)
+                    .search([("iso_code", "=", lang_code)])
+                )
+                print(lang)
                 thumbnails = item["snippet"]["thumbnails"]
                 thumbnail_url = (
                     thumbnails["high"]["url"]
@@ -79,9 +88,19 @@ class YoutubeVideo(models.Model):
                         "date": datetime.fromisoformat(
                             item["snippet"]["publishedAt"].replace("Z", "")
                         ),
+                        "lang_id": lang.id if lang else False,
                         "thumbnail": thumbnail_content,
                     }
                 )
+
+    def watch(self):
+        self.ensure_one()
+        self.viewed = True
+        return {
+            "type": "ir.actions.act_url",
+            "url": self.url,
+            "target": "new",
+        }
 
     @api.model_create_multi
     def create(self, vals_list):

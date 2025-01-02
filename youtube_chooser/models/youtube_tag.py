@@ -11,3 +11,11 @@ class YoutubeTag(models.Model):
     )
     name = fields.Char("Tag")
     active = fields.Boolean(default=True)
+
+    _sql_constraints = [
+        (
+            "uniq_tag",
+            "UNIQUE(user_id, name)",
+            "Tags must be unique.",
+        ),
+    ]

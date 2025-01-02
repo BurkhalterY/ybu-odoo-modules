@@ -12,6 +12,7 @@
                 <field name="date" optional="show"/>
                 <field name="tag_ids" widget="many2many_tags" optional="show"/>
                 <field name="playlist_id" optional="hide"/>
+                <field name="viewed" widget="boolean_toggle" optional="show"/>
             </list>
         </field>
     </record>
@@ -56,18 +57,24 @@
         <field name="name">youtube.video.view.form</field>
         <field name="model">youtube.video</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form>
+                <header>
+                    <button string="Watch" name="watch" type="object" class="oe_highlight" icon="fa-play"/>
+                    <button string="Re-sync" name="sync" type="object" icon="fa-refresh"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
-                            <field name="url"/>
                             <field name="name"/>
+                            <field name="url"/>
                             <field name="channel"/>
                             <field name="playlist_id"/>
+                            <field name="date"/>
                         </group>
                         <group>
+                            <field name="viewed" widget="boolean_toggle"/>
                             <field name="duration" widget="float_time"/>
-                            <field name="date"/>
+                            <field name="lang_id" context="{'active_test': False}"/>
                             <field name="tag_ids" widget="many2many_tags"/>
                         </group>
                     </group>

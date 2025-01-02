@@ -9,7 +9,12 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="tag_ids" widget="many2many_tags" optional="show"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="lang_id" context="{'active_test': False}"/>
+                        </group>
+                        <group>
+                            <field name="duration_min" widget="float_time"/>
+                            <field name="duration_max" widget="float_time"/>
                         </group>
                     </group>
                 </sheet>

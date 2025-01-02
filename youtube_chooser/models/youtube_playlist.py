@@ -1,6 +1,5 @@
 import requests
 from odoo import api, fields, models
-from odoo.addons.youtube_chooser.utils.utils import get_channel_id
 
 
 class YoutubePlaylist(models.Model):
@@ -12,7 +11,7 @@ class YoutubePlaylist(models.Model):
         "res.users", string="User", default=lambda self: self.env.uid
     )
     name = fields.Char("Name")
-    url = fields.Char("URL")
+    url = fields.Char("URL", required=True)
     ttype = fields.Selection(
         [
             ("playlist", "Playlist"),
@@ -42,13 +41,25 @@ class YoutubePlaylist(models.Model):
             elif "/@" in playlist.url:
                 playlist.ttype = "channel"
                 playlist.youtubeid = playlist.url.split("@")[1].split("/")[0]
-                if not (
-                    playlist.youtubeid.startswith("UC")
-                    and len(playlist.youtubeid) == 24
-                ):
-                    playlist.youtubeid = get_channel_id(
-                        playlist.youtubeid, self.env.company.youtube_api_key
-                    )
+                playlist.get_channel_id()
+
+    def get_channel_id(self):
+        self.ensure_one()
+        if self.youtubeid.startswith("UC") and len(self.youtubeid) == 24:
+            return
+        api_url = "https://www.googleapis.com/youtube/v3/search"
+        params = {
+            "part": "snippet",
+            "q": self.youtubeid,
+            "type": "channel",
+            "key": self.env.company.youtube_api_key,
+        }
+        response = requests.get(api_url, params=params)
+        if response.status_code != 200:
+            return
+        data = response.json()
+        if "items" in data and len(data["items"]) > 0:
+            self.youtubeid = data["items"][0]["id"]["channelId"]
 
     def get_name_from_api(self):
         for playlist in self:

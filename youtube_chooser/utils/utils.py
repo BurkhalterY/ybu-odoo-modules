@@ -1,7 +1,5 @@
 import re
 
-import requests
-
 
 def iso8601_to_minutes(duration):
     if not duration:
@@ -17,19 +15,3 @@ def iso8601_to_minutes(duration):
 
     total_minutes = hours * 60 + minutes + seconds / 60
     return total_minutes
-
-
-def get_channel_id(channel_name, api_key):
-    api_url = "https://www.googleapis.com/youtube/v3/search"
-    params = {
-        "part": "snippet",
-        "q": channel_name,
-        "type": "channel",
-        "key": api_key,
-    }
-    response = requests.get(api_url, params=params)
-    if response.status_code != 200:
-        return
-    data = response.json()
-    if "items" in data and len(data["items"]) > 0:
-        return data["items"][0]["id"]["channelId"]
