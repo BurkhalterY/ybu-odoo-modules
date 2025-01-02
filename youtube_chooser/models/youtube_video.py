@@ -58,14 +58,12 @@ class YoutubeVideo(models.Model):
             if "items" not in data:
                 continue
             for item in data["items"]:
-                lang_code = item["snippet"]["defaultAudioLanguage"][:2]
-                print(lang_code)
+                lang_code = item["snippet"].get("defaultAudioLanguage", "")[:2]
                 lang = (
                     self.env["res.lang"]
                     .with_context(active_test=False)
                     .search([("iso_code", "=", lang_code)])
                 )
-                print(lang)
                 thumbnails = item["snippet"]["thumbnails"]
                 thumbnail_url = (
                     thumbnails["high"]["url"]
