@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="youtube_video_chooser_view_form" model="ir.ui.view">
+        <field name="name">youtube.video.chooser.view.form</field>
+        <field name="model">youtube.video.chooser</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="lang_id" context="{'active_test': False}"/>
+                        </group>
+                        <group>
+                            <field name="duration_min" widget="float_time"/>
+                            <field name="duration_max" widget="float_time"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Choose" class="btn-primary" name="action_random" type="object" data-hotkey="r"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_youtube_video_chooser" model="ir.actions.act_window">
+        <field name="name">Chooser</field>
+        <field name="res_model">youtube.video.chooser</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
